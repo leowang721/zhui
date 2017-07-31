@@ -1,0 +1,35 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)SelectInlineEdit {
+  .$(prefix)FormCtrl .$(prefix)FormCtrl-message {
+    display: none;
+  }
+
+  &-info {
+    @mixin ctrl-ui;
+    line-height: $ctrl-label-line-height;
+    height: $ctrl-label-line-height;
+    &:hover:not([disabled]) {
+      background-color: #fffdf1;
+      cursor: text;
+      font-style: italic;
+    }
+  }
+
+  &-form {
+    .$(prefix)FormCtrl {
+      display: inline-block;
+    }
+    .$(prefix)Select {
+      margin-right: 10px;
+    }
+  }
+
+  &--is-faulty .$(prefix)Select .$(prefix)Select-container {
+    @mixin ctrl-ui-faulty;
+  }
+  &--is-passed .$(prefix)Select .$(prefix)Select-container  {
+    @mixin ctrl-ui-passed;
+  }
+}

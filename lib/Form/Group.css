@@ -1,0 +1,25 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)FormGroup {
+
+  @mixin ctrl-ui;
+
+  border: none;
+  border-radius: $group-border-radius;
+  display: block;
+
+  &-title {
+    text-align: $group-legend-text-align;
+    border-bottom: 1px dashed $border-color-normal;
+    padding: 5px 0;
+    margin-bottom: 1em;
+  }
+  &-content {
+    display: table-cell;
+  }
+
+  .$(prefix)Inline > .$(prefix)FormCtrl {
+    margin-right: 5px;
+  }
+}

@@ -1,0 +1,48 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)ButtonGroup {
+
+  display: inline-block;
+  padding-left: 1px;
+  width: auto;
+
+  /* 先任性的这么搞了，哪个大神优化一下 */
+  & .$(prefix)Button {
+    margin: 0 0 0 -1px!important;
+    display: inline-block;
+
+    .$(prefix)FormCtrl-content {
+      margin: 0;
+    }
+
+    button {
+      z-index: 1;
+    }
+
+    &:hover {
+      z-index: 2;
+    }
+    button:focus,
+    button:active {
+      z-index: 2;
+    }
+
+    &:not(:first-child):not(:last-child) button{
+      border-radius: 0;
+    }
+    &:first-child button {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    &:last-child button {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    & > .$(prefix)FormCtrl-content > .$(prefix)FormCtrl-message {
+      display: none;
+      height: 0;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)FormCtrl {
+  /* 位置 */
+  display: inline-block;
+  position: relative;
+  /* 大小 */
+  box-sizing: $ctrl-box-sizing;
+  padding: $ctrl-padding;
+  margin: $ctrl-margin;
+  /* 长相 */
+  background-color: $bg-color-normal;
+  color: $text-color;
+  font-size: $text-size;
+  font-weight: normal;
+  text-align: $ctrl-text-align;
+  vertical-align: $ctrl-vertical-align;
+
+  &-label {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    line-height: $ctrl-label-line-height;
+    font-size: $text-size;
+  }
+
+  &-content {
+    display: inline-block;
+    text-align: left;
+    position: relative;
+  }
+  &-message {
+    font-size: 11px;
+    text-align: left;
+    color: $color-error;
+    height: 20px;
+    padding-top: 2px;
+  }
+
+  @mixin ctrl-layout;
+}

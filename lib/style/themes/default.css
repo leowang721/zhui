@@ -1,0 +1,108 @@
+$prefix: Zhui;
+
+/* colors */
+$color-normal: #404040;
+$color-primary: #108ee9;
+$color-info: #108ee9;
+$color-success: #00a854;
+$color-warning: #ffbf00;
+$color-error: #f04134;
+$color-hightlight: rgba(251, 246, 13, .65);
+$color-disabled: rgba(0, 0, 0, .25);
+$color-link: #03e;
+$color-hover: #108ee9;
+$color-danger: #f04134;
+
+/* background colors */
+$bg-color-normal: #fff;
+$bg-color-primary: #108ee9;
+$bg-color-info: #ecf6fd;
+$bg-color-success: #ebf8f2;
+$bg-color-warning: #fffaeb;
+$bg-color-error: #fef0ef;
+$bg-color-disabled: #f7f7f7;
+$bg-color-danger: #f7f7f7;
+
+/* boxshadow */
+$box-shadow-active: 0 0 0 2px rgba(16, 142, 233, .2);
+$box-shadow-success: 0 0 0 2px rgba(0, 168, 84, .2);
+$box-shadow-warning: 0 0 0 2px rgba(255, 191, 0, .2);
+$box-shadow-error: 0 0 0 2px rgba(240, 65, 52, .2);
+$box-shadow-danger: 0 0 0 2px rgba(240, 65, 52, .2);
+
+/* text */
+$text-color: $color-normal;
+$text-size: 13px;
+
+/* link */
+$link-text-color: $color-link;
+$link-hover-color: $color-hover;
+$link-decoration: none;
+$link-hover-decoration: none;
+
+/* border */
+$border-color-hover: $color-hover;
+$border-color-disabled: #d9d9d9;
+$border-color-info: #d2eafb;
+$border-color-success: #00a854;
+$border-color-warning: #ffbf00;
+$border-color-error: #f04134;
+$border-color-danger: #d9d9d9;
+
+$border-color-normal: #d9d9d9;
+$border-width-normal: 1px;
+$border-style-normal: solid;
+
+$border-normal: $border-width-normal $border-color-normal $border-style-normal;
+$border-radius-normal: 4px;
+
+/* ctrls common */
+$ctrl-box-sizing: border-box;
+$ctrl-vertical-align: middle;
+$ctrl-text-align: left;
+$ctrl-margin: 0;
+$ctrl-padding: 0;
+$ctrl-label-width: 150px;
+$ctrl-label-line-height: 28px;
+$ctrl-inline-height: 28px;
+$ctrl-inline-width: 100%;
+$ctrl-inline-width-pixels: 300px;
+$ctrl-inline-line-height: 22px;
+
+/* group */
+$group-border: $border-width-normal $border-color-normal $border-style-normal;
+$group-border-radius: $border-radius-normal;
+$group-legend-text-align: left;
+$group-legend-margin: 0 8px;
+$group-legend-padding: 0 2px;
+
+/* buttons */
+$btn-color: rgba(0, 0, 0, .65);
+$btn-font-weight: 500;
+$btn-cursor: pointer;
+$btn-padding: 0 15px;
+$btn-text-align: center;
+
+/* inputs */
+$input-cursor: text;
+$input-font-size: calc($text-size - 1);
+$input-padding: 2px 8px;
+$input-text-align: left;
+$input-inline-width: 100%;
+
+/* selects */
+$select-padding: 2px 20px 2px 8px;
+
+/* Animation */
+$ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+$ease-out-back: cubic-bezier(0.12, 0.4, 0.29, 1.46);
+$ease-in-back: cubic-bezier(0.71, -0.46, 0.88, 0.6);
+$ease-in-out-back: cubic-bezier(0.71, -0.46, 0.29, 1.46);
+$ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
+$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+$ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);

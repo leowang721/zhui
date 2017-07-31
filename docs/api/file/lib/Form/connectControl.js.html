@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">lib/Form/connectControl.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Button</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/Button/index.js~Button.html">Button</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Form</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/Form/Group.js~FormGroup.html">FormGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/Form/index.js~Form.html">Form</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-connectControl">connectControl</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Group">Group</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Input</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/Input/index.js~Input.html">Input</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">old</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/AdPreview.js~AdPreview.html">AdPreview</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/Alert.js~Alert.html">Alert</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/AsyncWrapper.js~AsyncWrapper.html">AsyncWrapper</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/Button.js~Button.html">Button</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/CheckboxGroup.js~CheckboxGroup.html">CheckboxGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/CounterTip.js~CounterTip.html">CounterTip</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/Dropdown.js~Dropdown.html">Dropdown</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/InfiniteScroll.js~InfiniteScroll.html">InfiniteScroll</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/InfiniteSelect.js~InfiniteSelect.html">InfiniteSelect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/Input.js~Input.html">Input</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/Popover.js~Popover.html">Popover</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/Portal.js~Portal.html">Portal</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/RadioGroup.js~RadioGroup.html">RadioGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/SearchBar.js~SearchBar.html">SearchBar</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/Select.js~Select.html">Select</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/Tooltip.js~Tooltip.html">Tooltip</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-AsyncSimpleLineChart">AsyncSimpleLineChart</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-loadLineChart">loadLineChart</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Avatar">Avatar</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Card">Card</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Field">Field</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Header">Header</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-IconButton">IconButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Menu">Menu</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-MenuItem">MenuItem</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Section">Section</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SimpleLineChart">SimpleLineChart</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Spinner">Spinner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Tabs">Tabs</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-TagInput">TagInput</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Warning">Warning</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">old/DataTable</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/DataTable/Th.js~FilterTh.html">FilterTh</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-NormalTh">NormalTh</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SortTh">SortTh</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-DataTable">DataTable</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">old/Dialog</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/Dialog/Dialog.js~Dialog.html">Dialog</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ConfirmDialog">ConfirmDialog</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-staticize">staticize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-confirm">confirm</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">old/EventsJar</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/old/EventsJar/index.js~EventsJar.html">EventsJar</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">old/SVGIcon</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SVGIcon">SVGIcon</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">old/ZEditor</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ZEditor">ZEditor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-index">index</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">util</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getControlClassNames">getControlClassNames</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getStatusFromProps">getStatusFromProps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CLASS_PREFIX">CLASS_PREFIX</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-LAYOUT">LAYOUT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-STATUS">STATUS</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">lib/Form/connectControl.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @file FormControl &#x7EC4;&#x4EF6;&#x7684; decorator
+ *
+ * @author Leo Wang(wangkemiao@zhihu.com)
+ */
+
+import isEqual from &apos;lodash.isequal&apos;
+import omit from &apos;lodash.omit&apos;
+import React, {Component} from &apos;react&apos;
+import PropTypes from &apos;prop-types&apos;
+import cx from &apos;classnames&apos;
+import kebabCase from &apos;lodash.kebabcase&apos;
+import AsyncValidator from &apos;async-validator&apos;;
+
+import {getStatusFromProps} from &apos;../util&apos;
+import {CLASS_PREFIX, STATUS} from &apos;../util/config&apos;
+
+import &apos;./Control.css&apos;
+
+export default function connectControl(WrappedComponent) {
+
+  /**
+   * &#x8868;&#x5355;&#x5143;&#x7D20;&#x7EC4;&#x4EF6;
+   *
+   * @export FormControl
+   */
+  return class FormControl extends Component {
+
+    /**
+     * &#x7EC4;&#x4EF6;&#x63A5;&#x53D7;&#x5E76;&#x4F7F;&#x7528;&#x7684; props &#x5B9A;&#x4E49;&#xFF0C;&#x6240;&#x6709;&#x7EC4;&#x4EF6;&#x7684;&#x516C;&#x5171; props
+     *
+     * &#x6CE8;&#x610F;&#x5728;&#x8FD9;&#x91CC;&#x4F1A;&#x4F20;&#x9012;&#x7ED9;&#x771F;&#x5B9E;&#x63A7;&#x4EF6;&#x7684; props &#x53EA;&#x6709; id, status
+     * &#x8FD8;&#x6709;&#x4E24;&#x4E2A;&#x4F20;&#x8FC7;&#x53BB;&#x7684;&#x5B9E;&#x9645;&#x662F; Control &#x63A5;&#x7BA1;&#x7684;&#xFF1A; value, onValueChange&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x901A;&#x8FC7; props &#x4F20;&#x5165;&#x7684;
+     *
+     * @static
+     * @memberof Control
+     *
+     * @property {string} id &#x547D;&#x540D;&#xFF0C;&#x6B64; id &#x4F1A;&#x88AB;&#x4F20;&#x7ED9;&#x771F;&#x5B9E;&#x63A7;&#x4EF6;&#xFF0C;&#x4F1A;&#x88AB; Form &#x63A5;&#x7BA1;
+     * @property {string} label &#x6807;&#x7B7E;
+     * @property {Array|Object} rules &#x6821;&#x9A8C;&#x89C4;&#x5219;&#xFF0C;&#x4F1A;&#x88AB; Form &#x63A5;&#x7BA1;
+     * @property {any} value &#x63A7;&#x4EF6;&#x503C;&#xFF0C;&#x4F1A;&#x88AB; Form &#x63A5;&#x7BA1;&#xFF0C;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x65E0;&#x6548;
+     * @property {any} defaultValue &#x63A7;&#x4EF6;&#x9ED8;&#x8BA4;&#x503C;
+     * @property {string} status &#x72B6;&#x6001;&#xFF0C;&#x4F1A;&#x88AB; Form &#x63A5;&#x7BA1;
+     * @property {string} message &#x63D0;&#x793A;&#x4FE1;&#x606F;&#xFF0C;&#x4F1A;&#x88AB; Form &#x63A5;&#x7BA1;
+     * @property {boolean} [disabled=false] &#x662F;&#x5426;&#x7981;&#x7528;
+     * @property {boolean} [readonly=false] &#x662F;&#x5426;&#x53EA;&#x8BFB;
+     * @property {string} className &#x4ECE;&#x5916;&#x90E8;&#x6307;&#x5B9A;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x6837;&#x5F0F;&#x7C7B;&#x540D;&#xFF0C;&#x4E0D;&#x4F1A;&#x4F20;&#x9012;&#x7ED9;&#x771F;&#x5B9E;&#x63A7;&#x4EF6;
+     * @property {React.CSSProperties} style &#x4ECE;&#x5916;&#x90E8;&#x6307;&#x5B9A;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x6837;&#x5F0F;&#xFF0C;&#x4E0D;&#x4F1A;&#x4F20;&#x9012;&#x7ED9;&#x771F;&#x5B9E;&#x63A7;&#x4EF6;
+     *
+     * @property {function} onValueChange &#x503C;&#x53D8;&#x5316;&#x65F6;&#x7684;&#x76F8;&#x5E94;&#x53E5;&#x67C4;&#xFF0C;&#x6765;&#x81EA;&#x4E8E; Form hijack
+     * @property {function} onStatusChange status &#x53D8;&#x5316;&#x65F6;&#x7684;&#x76F8;&#x5E94;&#x53E5;&#x67C4;&#xFF0C;&#x6765;&#x81EA;&#x4E8E; Form hijack
+     * @property {function} onRulesChange rules &#x53D8;&#x5316;&#x65F6;&#x7684;&#x76F8;&#x5E94;&#x53E5;&#x67C4;&#xFF0C;&#x6765;&#x81EA;&#x4E8E; Form hijack
+     * @property {function} onMessageChange message &#x53D8;&#x5316;&#x65F6;&#x7684;&#x76F8;&#x5E94;&#x53E5;&#x67C4;&#xFF0C;&#x6765;&#x81EA;&#x4E8E; Form hijack
+     */
+    static propTypes = {
+      id: PropTypes.string,
+      label: PropTypes.string,
+      className: PropTypes.string,
+      style: PropTypes.object,
+
+      // &#x4F1A;&#x88AB; Form &#x81EA;&#x52A8;&#x704C;&#x5165;&#x7684;&#x4E8B;&#x4EF6;&#x53E5;&#x67C4;
+      onValueChange: PropTypes.func,
+      onStatusChange: PropTypes.func,
+      onRulesChange: PropTypes.func,
+      onMessageChange: PropTypes.func,
+    }
+
+    /**
+     * &#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x672C;&#x7C7B;&#x7684; mark&#xFF0C;&#x5F53;&#x524D;&#x7528;&#x4E8E; Form &#x4E2D;&#x67E5;&#x627E; Controls
+     *
+     * @static
+     */
+    static IS_ZHUI_FORM_CONTROL = true
+
+    /**
+     * Creates an instance of Control.
+     * @param {Object} props
+     * @memberof Control
+     */
+    constructor(props) {
+      super(props)
+      this.generateValidator(props)
+    }
+
+    /**
+     * props &#x88AB;&#x4FEE;&#x6539;&#x65F6;&#x7684;&#x5904;&#x7406;
+     *
+     * @param {Object} nextProps
+     *
+     * @emits {onRulesChange} rule &#x53D8;&#x5316;&#x65F6;&#x7684;&#x54CD;&#x5E94;&#x53E5;&#x67C4;
+     * @emits {onStatusChange} status &#x53D8;&#x5316;&#x65F6;&#x7684;&#x54CD;&#x5E94;&#x53E5;&#x67C4;
+     */
+    componentWillReceiveProps(nextProps) {
+      const {id, onRulesChange, onStatusChange} = this.props
+      // rule &#x88AB;&#x4FEE;&#x6539;&#x4E86;&#xFF0C;&#x540C;&#x6B65;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;
+      if (nextProps.rules !== this.props.rules
+        || (nextProps.rules &amp;&amp; this.props.rules &amp;&amp; nextProps.rules.length !== this.props.rules.length)
+        || !isEqual(nextProps.rules, this.props.rules)) {
+        this.generateValidator(nextProps)
+        onRulesChange &amp;&amp; onRulesChange({
+          payload: {
+            [id]: nextProps.rules
+          }
+        })
+      }
+      // diabled, readonly &#x88AB;&#x4FEE;&#x6539;&#xFF0C;&#x89E6;&#x53D1;&#x72B6;&#x6001;&#x66F4;&#x6539;
+      if (nextProps.disabled !== this.props.disabled || nextProps.readonly !== this.props.readonly) {
+        const status = getStatusFromProps(nextProps, this.props.status)
+        onStatusChange &amp;&amp; onStatusChange({
+          payload: {
+            [id]: {status}
+          }
+        })
+      }
+    }
+
+    /**
+     * &#x6839;&#x636E; rules &#x751F;&#x6210;&#x6821;&#x9A8C;&#x4F7F;&#x7528;&#x7684; validator
+     *
+     * @param {Object} [props=this.props]
+     */
+    generateValidator(props = this.props) {
+      const {id, rules} = props
+      this.validator = new AsyncValidator({
+        [id]: rules || []
+      })
+    }
+
+    /**
+     * &#x63A7;&#x4EF6;&#x503C;&#x53D1;&#x751F;&#x4FEE;&#x6539;&#x65F6;&#x7684;&#x5904;&#x7406;
+     *
+     * @method
+     *
+     * @param {any} value &#x4FEE;&#x6539;&#x540E;&#x7684;&#x503C;
+     *
+     * @emits {onValueChange} &#x503C;&#x53D8;&#x5316;&#x65F6;&#x7684;&#x54CD;&#x5E94;&#x53E5;&#x67C4;
+     */
+    onValueChange = value =&gt; {
+      const {id, onValueChange} = this.props
+
+      onValueChange &amp;&amp; onValueChange({
+        payload: {
+          [id]: value
+        }
+      })
+
+      this.validate(value).catch(() =&gt; {})
+    }
+
+    /**
+     * &#x6267;&#x884C;&#x6821;&#x9A8C;
+     *
+     * @param {any} [value=this.props.value]
+     *
+     * @emits {onStatusChange} status &#x53D8;&#x5316;&#x65F6;&#x7684;&#x54CD;&#x5E94;&#x53E5;&#x67C4;
+     * @emits {onMessageChange} message &#x53D8;&#x5316;&#x65F6;&#x7684;&#x54CD;&#x5E94;&#x53E5;&#x67C4;
+     *
+     * @returns {Promise}
+     */
+    validate(value = this.props.value) {
+      const {id, onStatusChange, onMessageChange} = this.props
+      return new Promise((resolve, reject) =&gt; {
+        // validation
+        if (this.validator) {
+          this.validator.validate({[id]: value}, {first: true}, (errors, fields) =&gt; {
+            if (errors) {
+              reject(errors)
+            }
+            else {
+              resolve()
+            }
+          })
+        }
+        else {
+          resolve()
+        }
+      }).then(() =&gt; {
+        onStatusChange &amp;&amp; onStatusChange({
+          payload: {
+            [id]: STATUS.PASSED
+          }
+        })
+        onMessageChange &amp;&amp; onMessageChange({
+          payload: {
+            [id]: &apos;&apos;
+          }
+        })
+      }).catch(errors =&gt; {
+        const payload = {
+          [id]: STATUS.FAULTY
+        }
+        onStatusChange &amp;&amp; onStatusChange({
+          payload: {
+            [id]: STATUS.FAULTY
+          }
+        })
+        onMessageChange &amp;&amp; onMessageChange({
+          payload: {
+            [id]: errors[0].message
+          }
+        })
+        throw payload
+      })
+    }
+
+    /**
+     * &#x6E32;&#x67D3;
+     *
+     * @memberof Control
+     */
+    render() {
+      const {
+        id,
+        label,
+        value,
+        status = getStatusFromProps(this.props),
+        message,
+        className,
+        style,
+        children,
+        ...resetProps
+      } = this.props
+
+      const passThroughProps = omit(resetProps, [
+        &apos;rules&apos;, &apos;defaultValue&apos;,
+        &apos;onValueChange&apos;, &apos;onStatusChange&apos;, &apos;onRulesChange&apos;, &apos;onMessageChange&apos;
+      ])
+
+      const classes = cx(
+        `${CLASS_PREFIX}FormCtrl`,  // &#x6574;&#x4F53;&#x6837;&#x5F0F;
+        `${CLASS_PREFIX}FormCtrl--is-${status}`,  // &#x72B6;&#x6001;&#x7C7B;
+        className  // &#x5916;&#x90E8;&#x6837;&#x5F0F;
+      )
+
+      const labelClasses = cx(
+        `${CLASS_PREFIX}FormCtrl-label`,  // &#x6574;&#x4F53;&#x6837;&#x5F0F;
+        `${CLASS_PREFIX}FormCtrl-label--is-${status}`  // &#x72B6;&#x6001;&#x7C7B;
+      )
+
+      const contentClasses = cx(
+        `${CLASS_PREFIX}FormCtrl-content`,  // &#x6574;&#x4F53;&#x6837;&#x5F0F;
+        `${CLASS_PREFIX}FormCtrl-content--is-${status}`  // &#x72B6;&#x6001;&#x7C7B;
+      )
+
+      return (
+        &lt;div
+          className={classes}
+          style={style}
+        &gt;
+          {label &amp;&amp; (
+            &lt;label
+              htmlFor={id}
+              title={typeof label === &apos;string&apos; ? label : &apos;&apos;}
+              className={labelClasses}
+            &gt;
+              {label}
+            &lt;/label&gt;
+          )}
+          &lt;div className={contentClasses}&gt;
+            &lt;WrappedComponent
+              {...passThroughProps}
+              id={id}
+              value={value}
+              status={status}
+              onValueChange={this.onValueChange}
+            &gt;
+              {children}
+            &lt;/WrappedComponent&gt;
+            {message &amp;&amp; &lt;div className={`${CLASS_PREFIX}FormCtrl-message`}&gt;{message}&lt;/div&gt;}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      )
+    }
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)DialogConfirm {
+  &-container {
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    background-color: #fff;
+    @mixin ctrl-ui-border;
+  }
+  &-title {
+    text-align: left;
+    border-bottom: 1px solid $border-color-normal;
+    font-size: 13px;
+    padding: 8px 12px;
+    background-color: #0f88eb;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+  }
+  &-content {
+    text-align: left;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  &-footer {
+    padding: 8px 12px;
+    text-align: left;
+    .$(prefix)Button {
+      margin-right: 10px;
+      .$(prefix)FormCtrl-message {
+        display: none;
+      }
+    }
+  }
+}

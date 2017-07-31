@@ -1,0 +1,134 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)InputNumber-wrap {
+  @mixin ctrl-ui-border;
+  @mixin ctrl-ui-disabled;
+
+  &:not(.disabled) {
+    @mixin ctrl-ui-hover $text-color;
+  }
+
+  transition: border .3s $ease-in-out, box-shadow .3s $ease-in-out;
+  position: relative;
+  min-width: $ctrl-inline-width-pixels;
+  height: 26px;
+
+  &:hover .$(prefix)InputNumber-control {
+    opacity: 1;
+  }
+
+  &:hover .$(prefix)InputNumber-input {
+    padding-right: 29px;
+  }
+
+  &.disabled .$(prefix)InputNumber-input {
+    cursor: inherit;
+  }
+
+  &.disabled .$(prefix)InputNumber-control {
+    display: none;
+  }
+}
+
+.$(prefix)InputNumber-active {
+  background-color: $bg-color-normal;
+  border-color: $border-color-hover;
+  color: $color-hover;
+  box-shadow: $box-shadow-active;
+  outline: 0;
+}
+
+.$(prefix)InputNumber-control {
+  user-select: none;
+  opacity: 0;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  color: #ccc;
+  border-top-right-radius: $border-radius-normal;
+  border-bottom-right-radius: $border-radius-normal;
+  background-color: $bg-color-normal;
+  right: 0;
+  height: 100%;
+  width: 22px;
+  transition: opacity .3s $ease-in-out;
+  border-left: 1px $border-style-normal $border-color-normal;
+}
+
+.$(prefix)InputNumber-control::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 0;
+  border-top: 1px $border-style-normal $border-color-normal;
+  margin-top: -.5px;
+}
+
+.$(prefix)InputNumber-up,
+.$(prefix)InputNumber-down {
+  transition: color .3s $ease-in-out;
+  display: block;
+  height: 50%;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.$(prefix)InputNumber-down {
+  transform: rotate(180deg);
+}
+
+.$(prefix)InputNumber-input {
+  padding: 0 7px;
+  border-radius: $border-radius-normal;
+  border: none;
+  height: 100%;
+  background-color: transparent;
+  box-sizing: border-box;
+  width: 100%;
+  -moz-appearance: textfield;
+  cursor: $input-cursor;
+  font-size: $input-font-size;
+  text-align: $input-text-align;
+
+  transition: padding .3s $ease-in-out;
+}
+
+.$(prefix)InputNumber-input {
+  outline: none;
+  box-sizing: border-box;
+
+  &--is-prefix {
+    padding-left: 30px;
+  }
+}
+
+.$(prefix)InputNumber-input::-webkit-inner-spin-button,
+.$(prefix)InputNumber-input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.$(prefix)InputNumber {
+  &--is-faulty .$(prefix)InputNumber-input {
+    @mixin ctrl-ui-faulty;
+  }
+  &--is-passed .$(prefix)InputNumber-input {
+    @mixin ctrl-ui-passed;
+  }
+
+  &-postfix {
+    position: absolute;
+    line-height: 28px;
+    margin-left: 5px;
+  }
+  &-prefix {
+    position: absolute;
+    line-height: 28px;
+    margin-left: 0.5em;
+  }
+}

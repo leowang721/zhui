@@ -1,0 +1,4 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)Form {}

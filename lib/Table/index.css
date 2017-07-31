@@ -1,0 +1,52 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)Table {
+  &-container {
+    width: 100%;
+    background-color: #fff;
+    overflow-x: auto;
+  }
+  &-table {
+    width: 100%;
+    font-size: 13px;
+    border: 1px solid $border-color-normal;
+  }
+
+  &-tableHeadCell {
+    padding: 10px 10px;
+    border-bottom: 1px solid $border-color-normal;
+    background-color: #d1ebfc;
+    // color: #fff;
+    &:not(:last-child){
+      border-right: 1px solid $border-color-normal;
+    }
+  }
+
+  &-tableBodyRow {
+    &:nth-child(even) {
+      background-color: #f6f6f6;
+    }
+    &:hover {
+      background-color: #e7f3fd;
+    }
+  }
+
+  &-tableBodyCell {
+    padding: 8px 10px;
+    border-bottom: 1px solid $border-color-normal;
+    &:not(:last-child){
+      border-right: 1px solid $border-color-normal;
+    }
+
+    &--is-left {
+      text-align: left;
+    }
+    &--is-right {
+      text-align: right;
+    }
+    &--is-center {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)File {
+  vertical-align: top;
+  &-container {
+  }
+
+  &-files {
+    min-height: $ctrl-inline-height;
+    line-height: $ctrl-inline-height;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+      }
+    }
+
+    &--is-empty {
+      font-style: italic;
+      color: $color-warning;
+    }
+  }
+  &-delBtn {
+    margin-left: 1em;
+  }
+
+  &-dropzone {
+    @mixin ctrl-ui;
+    @mixin ctrl-ui-border 1px dashed $border-color-normal;
+
+    min-width: 300px;
+    min-height: $ctrl-inline-height;
+    font-size: $input-font-size;
+    height: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: $border-color-normal;
+    cursor: pointer;
+
+    @mixin ctrl-ui-hover;
+    @mixin ctrl-ui-disabled;
+  }
+
+  &-uploader:hover &-dropzone {
+    color: $color-hover;
+  }
+}

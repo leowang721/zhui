@@ -1,0 +1,66 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)Button {
+  vertical-align: top;
+  button {
+    @mixin ctrl-ui;
+
+    width: auto;
+    background: #fff;
+    color: $btn-color;
+    cursor: $btn-cursor;
+    font-weight: $btn-font-weight;
+    padding: $btn-padding;
+    text-align: $btn-text-align;
+    touch-action: manipulation;
+    user-select: none;
+    white-space: nowrap;
+
+    @mixin ctrl-ui-border;
+    @mixin ctrl-ui-hover $text-color;
+    @mixin ctrl-ui-active $text-color;
+    @mixin ctrl-ui-disabled;
+  }
+
+  & > .$(prefix)FormCtrl-content > .$(prefix)FormCtrl-message {
+    display: none;
+    .$(prefix)Inline & {
+      display: block;
+    }
+  }
+}
+
+.$(prefix)ButtonSkinPrimary {
+  button {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: #fff;
+    @mixin ctrl-ui-hover #fff, #49a9ee, #49a9ee;
+    @mixin ctrl-ui-active #fff, #49a9ee, #49a9ee;
+}
+  }
+.$(prefix)ButtonSkinDashed {
+  button {
+  }
+}
+    border-style: dashed;
+.$(prefix)ButtonSkinDanger {
+  button {
+    background-color: $bg-color-danger;
+    border-color: $border-color-danger;
+    color: $color-danger;
+    @mixin ctrl-ui-hover #fff, $color-danger, $color-danger;
+  }
+}
+.$(prefix)ButtonSkinLink {
+  button {
+    background: none;
+    border: none;
+    color: $link-text-color;
+    font-weight: normal;
+    @mixin ctrl-ui-hover $link-hover-color;
+    @mixin ctrl-ui-active $link-text-color, none, none, none;
+    @mixin ctrl-ui-disabled $color-disabled, none, none;
+  }
+}

@@ -1,0 +1,148 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)Select {
+  &-container {
+    @mixin ctrl-ui;
+    @mixin ctrl-ui-border;
+
+    /* 位置 */
+    position: relative;
+    /* 大小 */
+    box-sizing: border-box;
+    font-size: $input-font-size;
+    width: 200px;
+    height: $ctrl-inline-height;
+    /* 长相 */
+    text-align: $input-text-align;
+    border: $border-normal;
+    border-radius: $border-radius-normal;
+    /* 交互 */
+    cursor: pointer;
+    padding: 0;
+
+    @mixin ctrl-ui-hover $text-color;
+    @mixin ctrl-ui-active $text-color;
+    @mixin ctrl-ui-disabled;
+  }
+
+  &-selection {
+    /* 位置 */
+    /* 大小 */
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: $select-padding;
+    width: 100%;
+    height: $ctrl-inline-height;
+    line-height: calc($ctrl-inline-height - 4);
+    /* 长相 */
+    color: rgba(0, 0, 0, .65);
+    text-align: left;
+    text-overflow:ellipsis;
+    /* 交互 */
+
+    .$(prefix)Input {
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      input {
+        padding-right: 20px;
+        width: 200px;
+        min-width: 0;
+        color: rgba(0, 0, 0, .65);
+      }
+
+      .$(prefix)FormCtrl-label {
+        display: none;
+      }
+      .$(prefix)FormCtrl-message {
+        display: none;
+      }
+    }
+  }
+
+  &-arrow {
+    /* 位置 */
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    /* 大小 */
+    /* 长相 */
+    font-style: normal;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    /* 交互 */
+    text-align: center;
+    user-select: none;
+    zoom: 1;
+    &::before {
+      display: block;
+      content: '▼';
+      transition: transform .2s ease;
+    }
+  }
+
+  &-container--is-expanded &-selection {
+    border-color: $border-color-hover;
+  }
+
+  &-container--is-expanded &-arrow {
+    top: 1px;
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-options {
+    /* 大小 */
+    box-sizing: border-box;
+    width: 200px;
+    height: auto;
+    max-height: 200px;
+    padding: 0;
+    /* 长相 */
+    background-color: #fff;
+    border: $border-normal;
+    border-radius: $border-radius-normal;
+    display: block;
+    text-align: left;
+    word-break: break-all;
+    /* 交互 */
+    cursor: default;
+    z-index: 10;
+    outline: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      /* 位置 */
+      position: relative;
+      /* 大小 */
+      font-size: 12px;
+      margin: 0;
+      padding: 7px 8px;
+      /* 长相 */
+      color: rgba(0, 0, 0, .65);
+      display: block;
+      font-weight: 400;
+      list-style: none;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      /* 交互 */
+      white-space: nowrap;
+      cursor: pointer;
+      transition: background .3s ease;
+      user-select: none;
+      &:hover {
+        background-color: #ecf6fd;
+      }
+    }
+    &--is-selected {
+      background-color: #ecf6fd;
+    }
+  }
+}

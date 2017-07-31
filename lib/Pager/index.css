@@ -1,0 +1,59 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)Pager {
+  &-container {
+    width: 100%;
+    background-color: #fff;
+    display: block;
+
+    &--is-left {
+      text-align: left;
+    }
+    &--is-right {
+      text-align: right;
+    }
+  }
+
+  &-detail {
+    display: inline-block;
+    & > div {
+      display: inline-block;
+
+      span {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin: 5px 2px;
+        line-height: 28px;
+        text-align: center;
+        cursor: pointer;
+        @mixin ctrl-ui-border;
+        &:hover {
+          border-color: $border-color-hover;
+          color: $color-hover;
+        }
+      }
+
+      .$(prefix)Pager-current {
+        background-color: $color-hover;
+        border-color: $border-color-hover;
+        color: #fff;
+        cursor: default;
+        &:hover {
+          border-color: $border-color-hover;
+          color: #fff;
+        }
+      }
+      .$(prefix)Pager-dot {
+        background: none;
+        border: none;
+        cursor: default;
+        &:hover {
+          border-color: $border-color-normal;
+          color: $color-normal;
+        }
+      }
+    }
+  }
+}

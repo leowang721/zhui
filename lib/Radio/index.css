@@ -1,0 +1,34 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)Radio {
+  .$(prefix)Radio-options {
+    margin: 0;
+    padding: 0;
+
+    li {
+      @mixin ctrl-ui;
+
+      line-height: $ctrl-inline-height;
+      list-style: none;
+      label {
+        cursor: pointer;
+      }
+      display: inline-block;
+      width: auto;
+
+      @mixin ctrl-ui-hover;
+      @mixin ctrl-ui-active;
+      @mixin ctrl-ui-disabled $color-disabled, none, none;
+    }
+    li[disabled] {
+      label {
+        cursor: not-allowed;
+      }
+    }
+  }
+  input {
+    @mixin ctrl-ui-disabled;
+    cursor: pointer;
+  }
+}

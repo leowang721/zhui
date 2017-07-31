@@ -1,0 +1,125 @@
+@define-mixin style-hover $color: $color-hover, $bg-color: $bg-color-normal, $border-color: $border-color-hover {
+  background-color: $bg-color;
+  border-color: $border-color;
+  color: $color;
+}
+@define-mixin style-active $color: $color-hover, $bg-color: $bg-color-normal, $border-color: $border-color-hover, $box-shadow: $box-shadow-active {
+  background-color: $bg-color;
+  border-color: $border-color;
+  color: $color;
+  box-shadow: $box-shadow;
+  outline: 0;
+}
+@define-mixin style-disabled $color: $color-disabled, $bg-color: $bg-color-disabled, $border-color: $border-color-disabled {
+  background: $bg-color;
+  border-color: $border-color;
+  color: $color;
+  cursor: not-allowed;
+  filter: grayscale(100%);
+}
+@define-mixin style-success {
+  background-color: $bg-color-normal;
+  border-color: $border-color-success;
+  color: $color-success;
+}
+@define-mixin style-error {
+  background-color: $bg-color-normal;
+  border-color: $border-color-error;
+  color: $color-error;
+}
+
+@define-mixin ctrl-layout {
+  /* 布局: Horizontal, Vertical, Inline */
+  .$(prefix)Horizontal & {
+    display: table-row;
+    &-label {
+      display: table-cell;
+      text-align: right;
+      min-width: $ctrl-label-width;
+    }
+    &-content {
+      display: table-cell;
+    }
+  }
+
+  .$(prefix)Vertical & {
+    display: block;
+    &-label {
+      display: block;
+      text-align: left;
+      min-width: 0;
+    }
+    &-content {
+      display: block;
+    }
+  }
+
+  .$(prefix)Inline & {
+    display: inline-block;
+    &-label {
+      display: inline-block;
+      text-align: left;
+      min-width: 0;
+    }
+    &-content {
+      display: inline-block;
+    }
+  }
+}
+
+@define-mixin ctrl-ui-border $border: $border-normal, $border-radius: $border-radius-normal {
+  border: $border;
+  border-radius: $border-radius;
+}
+
+@define-mixin ctrl-ui-hover $color: $color-hover, $bg-color: $bg-color-normal, $border-color: $border-color-hover {
+  &:not([disabled]) {
+    &:hover {
+      @mixin style-hover $color, $bg-color, $border-color;
+    }
+  }
+}
+
+@define-mixin ctrl-ui-active $color: $color-hover, $bg-color: $bg-color-normal, $border-color: $border-color-hover, $box-shadow: $box-shadow-active {
+  &:not([disabled]) {
+    &:active,
+    &:focus {
+      @mixin style-active $color, $bg-color, $border-color, $box-shadow;
+    }
+  }
+}
+
+@define-mixin ctrl-ui-disabled $color: $color-disabled, $bg-color: $bg-color-disabled, $border-color: $border-color-disabled {
+  &.disabled,
+  &[disabled],
+  &--is-disabled {
+    @mixin style-disabled $color, $bg-color, $border-color;
+  }
+}
+
+@define-mixin ctrl-ui-passed {
+  @mixin style-success;
+  @mixin ctrl-ui-hover $color-success, $bg-color-normal, $border-color-success;
+  @mixin ctrl-ui-active $color-success, $bg-color-normal, $border-color-success, $box-shadow-success;
+}
+
+@define-mixin ctrl-ui-faulty {
+  @mixin style-error;
+  @mixin ctrl-ui-hover $color-error, $bg-color-normal, $border-color-error;
+  @mixin ctrl-ui-active $color-error, $bg-color-normal, $border-color-error, $box-shadow-error;
+}
+
+@define-mixin ctrl-ui {
+  /* 位置 */
+  display: block;
+  position: relative;
+  /* 大小 */
+  box-sizing: $ctrl-box-sizing;
+  padding: 0;
+  margin: 0;
+  min-height: $ctrl-inline-height;
+  width: $ctrl-inline-width;
+  /* 长相 */
+  /* 交互 */
+  transition: all .3s $ease-in-out;
+}

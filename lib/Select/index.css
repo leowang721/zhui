@@ -3,57 +3,53 @@
 
 .$(prefix)Select {
   &-container {
+    font-size: $input-font-size;
+  }
+
+  &-selection {
     @mixin ctrl-ui;
     @mixin ctrl-ui-border;
 
+    @mixin ctrl-ui-hover $text-color;
+    @mixin ctrl-ui-active $text-color;
+    @mixin ctrl-ui-disabled;
     /* 位置 */
-    position: relative;
     /* 大小 */
+    position: relative;
     box-sizing: border-box;
-    font-size: $input-font-size;
-    width: 200px;
+    overflow: hidden;
+    padding: $select-padding;
     height: $ctrl-inline-height;
+    line-height: calc($ctrl-inline-height - 4);
     /* 长相 */
+    color: rgba(0, 0, 0, .65);
+    text-overflow:ellipsis;
     text-align: $input-text-align;
     border: $border-normal;
     border-radius: $border-radius-normal;
     /* 交互 */
     cursor: pointer;
-    padding: 0;
-
-    @mixin ctrl-ui-hover $text-color;
-    @mixin ctrl-ui-active $text-color;
-    @mixin ctrl-ui-disabled;
-  }
-
-  &-selection {
-    /* 位置 */
-    /* 大小 */
-    box-sizing: border-box;
-    overflow: hidden;
-    padding: $select-padding;
-    width: 100%;
-    height: $ctrl-inline-height;
-    line-height: calc($ctrl-inline-height - 4);
-    /* 长相 */
-    color: rgba(0, 0, 0, .65);
-    text-align: left;
-    text-overflow:ellipsis;
-    /* 交互 */
 
     .$(prefix)Input {
+      width: 100%;
+      display: block;
       position: absolute;
-      left: -1px;
-      top: -1px;
+      top: 0;
+      left: 0;
       input {
+        border-right: none;
+        position: absolute;
+        left: -1px;
+        top: -1px;
         padding-right: 20px;
-        width: 200px;
-        min-width: 0;
         color: rgba(0, 0, 0, .65);
       }
 
       .$(prefix)FormCtrl-label {
         display: none;
+      }
+      .$(prefix)FormCtrl-content {
+        display: block;
       }
       .$(prefix)FormCtrl-message {
         display: none;
@@ -96,7 +92,6 @@
   &-options {
     /* 大小 */
     box-sizing: border-box;
-    width: 200px;
     height: auto;
     max-height: 200px;
     padding: 0;

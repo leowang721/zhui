@@ -13,7 +13,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background: red;
+    background: #fff;
   }
   &-mask--is-black {
     left: 0;
@@ -24,11 +24,18 @@
   }
   &-mask--is-fixed {
     position: fixed;
-    display: table-cell;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     .ZhuiPopup-content {
       position: relative;
       text-align: center;
-      margin-top: 200px;
     }
+  }
+  &-mask--is-none {
+    left: 0;
+    right: 0;
+    background: none;
   }
 }

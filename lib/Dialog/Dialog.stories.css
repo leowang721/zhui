@@ -1,4 +1,4 @@
-.InputNumberDemo {
+.DialogDemo {
   &>section:not(:last-child) {
     border-bottom: 1px solid #efefef;
   }

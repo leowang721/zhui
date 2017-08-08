@@ -58,7 +58,7 @@ $border-radius-normal: 4px;
 
 /* ctrls common */
 $ctrl-box-sizing: border-box;
-$ctrl-vertical-align: middle;
+$ctrl-vertical-align: top;
 $ctrl-text-align: left;
 $ctrl-margin: 0;
 $ctrl-padding: 0;

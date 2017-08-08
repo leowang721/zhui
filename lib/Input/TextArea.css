@@ -1,15 +1,15 @@
 @import "../style/themes/default.css";
 @import "../style/mixins.css";
 
-.$(prefix)Input {
+.$(prefix)InputTextArea {
 
-  input {
+  textarea {
     @mixin ctrl-ui;
     @mixin ctrl-ui-border;
 
     cursor: $input-cursor;
     font-size: $input-font-size;
-    padding: $input-padding;
+    padding: 10px;
     text-align: $input-text-align;
 
     @mixin ctrl-ui-hover $text-color;
@@ -17,10 +17,10 @@
     @mixin ctrl-ui-disabled;
   }
 
-  &--is-faulty input {
+  &--is-faulty textarea {
     @mixin ctrl-ui-faulty;
   }
-  &--is-passed input {
+  &--is-passed textarea {
     @mixin ctrl-ui-passed;
   }
 }

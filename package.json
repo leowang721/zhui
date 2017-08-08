@@ -91,5 +91,11 @@
     "moduleNameMapper": {
       "\\.css$": "<rootDir>/__mock__/styleMock.js"
     }
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "docs/"
+    ]
   }
 }

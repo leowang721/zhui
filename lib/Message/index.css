@@ -1,0 +1,38 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)Message {
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  padding: 10px;
+  min-width: 300px;
+  background-color: #fff;
+  box-shadow: 0 0 3px 0 rgba(111, 111, 111, 0.2);
+  border: 1px solid $border-color-normal;
+  border-radius: $border-radius-normal;
+  overflow-wrap: break-word;
+  letter-spacing: 1px;
+  font-size: 13px;
+
+  &--is-info {
+    background-color: $bg-color-info;
+    color: $color-info;
+    border-color: $border-color-info;
+  }
+  &--is-success {
+    background-color: $bg-color-success;
+    color: $color-success;
+    border-color: $border-color-success;
+  }
+  &--is-warning {
+    background-color: $bg-color-warning;
+    color: $color-warning;
+    border-color: $border-color-warning;
+  }
+  &--is-error {
+    background-color: $bg-color-error;
+    color: $color-error;
+    border-color: $border-color-error;
+  }
+}

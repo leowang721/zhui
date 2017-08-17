@@ -58,8 +58,10 @@
       color: #ff7c5a;
     }
   }
+}
 
-  .ZhuiInputNumber {
-    margin-right: 1em;
+.MessageDemo-btnWrap {
+  .ZhuiButton:not(:last-child) {
+    margin-right: 2em;
   }
 }

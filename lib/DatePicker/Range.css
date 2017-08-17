@@ -2,6 +2,7 @@
 @import "../style/mixins.css";
 
 .$(prefix)DatePickerRange {
+  @mixin ctrl-base-style;
   vertical-align: top;
   &-container {
     @mixin ctrl-ui;
@@ -9,7 +10,7 @@
 
     min-width: 220px;
     min-height: $ctrl-inline-height;
-    font-size: $input-font-size;
+    font-size: 12px;
     cursor: pointer;
 
     @mixin ctrl-ui-hover;
@@ -22,7 +23,7 @@
 
   &-selection {
     padding: 0 8px;
-    line-height: 26px;
+    line-height: 28px;
     span {
       margin: 0 10px;
     }
@@ -50,9 +51,8 @@
 
   &-plain,
   &-options {
-    width: 384px;
     .$(prefix)DatePicker {
-      margin: 0 5px;
+      margin: 0;
       vertical-align: top;
       .$(prefix)DatePicker-selection {
         display: none;
@@ -63,24 +63,54 @@
       .$(prefix)DatePicker-container {
         border: none;
       }
+      .$(prefix)DatePicker-calendar {
+        border: none;
+      }
+      &:last-child {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &-quickset {
+    border-bottom: 1px solid $border-color-normal;
+    background-color: $bg-color-normal;
+    height: 30px;
+    text-align: center;
+    a {
+      color: #175199;
+      display: inline-block;
+      background: #edf4fa;
+      line-height: 24px;
+      text-decoration: none;
+      border-radius: 4px;
+      margin: 3px 5px 0 5px;
+      padding: 0 8px;
+      font-size: 12px;
+      font-weight: normal;
+      &:hover,
+      &:active {
+        color: $color-hover;
+      }
     }
   }
 
   &-options {
-    background: #fff;
+    background-color: #f7f8fa;
     @mixin ctrl-ui-border;
   }
 
   &-plain &-options{
-    padding-top: 5px;
     border: none;
     border-top: 1px solid $border-color-normal;
     border-radius: 0 0 4px 4px;
   }
 
   &-leftCalendar .ZhuiDatePicker-date--is-chosen,
+  &-rightCalendar .ZhuiDatePicker-date--is-chosen {
+    background-color: $bg-color-primary;
+  }
   &-leftCalendar .ZhuiDatePicker-date--is-after,
-  &-rightCalendar .ZhuiDatePicker-date--is-chosen,
   &-rightCalendar .ZhuiDatePicker-date--is-before {
     &:not(.ZhuiDatePicker-date--is-unavailable) {
       background-color: #ecf6fd;

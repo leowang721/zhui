@@ -9,7 +9,7 @@
 
     width: 182px;
     min-height: $ctrl-inline-height;
-    font-size: $input-font-size;
+    font-size: 12px;
     cursor: pointer;
 
     @mixin ctrl-ui-hover;
@@ -22,7 +22,7 @@
 
   &-selection {
     padding: 0 8px;
-    line-height: 26px;
+    line-height: 28px;
   }
 
   &-icon {
@@ -46,17 +46,20 @@
   }
 
   &-calendar {
-    width: 182px;
+    width: 200px;
     background-color: #fff;
-    font-size: $input-font-size;
+    font-size: 12px;
     box-sizing: border-box;
+    font-family: PingFang SC, Microsoft YaHei, sans-serif, Arial;
 
     @mixin ctrl-ui-border;
   }
 
   &-plain &-calendar {
     border: none;
-    width: 180px;
+    border-top: 1px solid $border-color-normal;
+    border-radius: 0;
+    width: 100%;
   }
 
   &-calendarTitle {
@@ -66,6 +69,7 @@
     line-height: 26px;
     height: 26px;
     border-bottom: 1px solid $border-color-normal;
+    font-weight: bold;
   }
 
   &-calendarLeftCtrl,
@@ -73,6 +77,8 @@
     span {
       font-family: Arial;
       font-size: 16px;
+      color: $color-gray;
+      font-weight: normal;
       @mixin ctrl-ui-hover;
       cursor: pointer;
       padding: 0 5px;
@@ -82,6 +88,8 @@
   &-calendarLeftCtrl {
     position: absolute;
     left: 3px;
+    border-right: 1px solid $border-color-normal;
+    padding-right: 5px;
     span:first-child:after {
       content: '\AB';
     }
@@ -93,6 +101,8 @@
     position: absolute;
     right: 3px;
     top: 0;
+    border-left: 1px solid $border-color-normal;
+    padding-left: 5px;
     span:first-child:after {
       content: '\203A';
     }
@@ -108,13 +118,13 @@
   }
   &-weekTitle {
     display: table-row;
-    background-color: #eee;
+    // background-color: #eee;
     span {
       display: table-cell;
       text-align: center;
       vertical-align: middle;
       font-weight: bold;
-      color: $color-normal;
+      color: $color-gray;
       height: 26px;
     }
   }
@@ -129,8 +139,9 @@
     text-align: center;
     vertical-align: middle;
     box-sizing: border-box;
-    width: 26px;
     height: 26px;
+    width: 26px;
+    margin: auto;
     border-radius: 4px;
 
     &:hover {
@@ -145,8 +156,9 @@
       color: #000;
     }
     &--is-chosen {
-      color: $color-hover;
+      color: $color-white;
       font-weight: bold;
+      background-color: $bg-color-primary;
     }
     &--is-unavailable {
       @mixin style-disabled;

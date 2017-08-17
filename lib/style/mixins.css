@@ -2,6 +2,8 @@
   background-color: $bg-color;
   border-color: $border-color;
   color: $color;
+  opacity: .8;
+  outline: 0;
 }
 @define-mixin style-active $color: $color-hover, $bg-color: $bg-color-normal, $border-color: $border-color-hover, $box-shadow: $box-shadow-active {
   background-color: $bg-color;
@@ -76,6 +78,7 @@
   &:not([disabled]) {
     &:hover {
       @mixin style-hover $color, $bg-color, $border-color;
+      text-decoration: none;
     }
   }
 }
@@ -110,6 +113,7 @@
 }
 
 @define-mixin ctrl-ui {
+  @mixin ctrl-base-style;
   /* 位置 */
   display: block;
   position: relative;
@@ -119,7 +123,31 @@
   margin: 0;
   min-height: $ctrl-inline-height;
   width: $ctrl-inline-width;
+  line-height: $ctrl-inline-line-height;
   /* 长相 */
   /* 交互 */
   transition: all .3s $ease-in-out;
+}
+
+@define-mixin ctrl-base-style {
+  color: $text-color;
+  font-size: $text-size;
+  font-weight: normal;
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-title;
+    font-weight: bold;
+  }
+}
+
+/* animation */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; /*初始状态 透明度为0*/
+  }
+  100% {
+    opacity: 1; /*结尾状态 透明度为1*/
+  }
+}
+@define-mixin animation-fade-in $last: .3s {
+  animation: fadeIn $last 1 $ease-in-out;
 }

@@ -1,0 +1,23 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)Thumbnail {
+  cursor: pointer;
+
+  img {
+    border-radius: 2px;
+    width: 100px;
+    height: 26px;
+  }
+}
+
+.$(prefix)FullImage-popup {
+  .$(prefix)Popup-content {
+    height: 100%;
+
+    img {
+      max-height: 80%;
+      box-shadow: $box-shadow-dialog;
+    }
+  }
+}

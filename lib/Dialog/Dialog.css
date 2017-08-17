@@ -4,41 +4,53 @@
 .$(prefix)DialogConfirm,
 .$(prefix)DialogAlert {
   &-container {
-    min-width: 300px;
-    background-color: #fff;
-    box-shadow: 3px 3px 3px rgba(111, 111, 111, 0.4);
-    border-radius: $border-radius-normal;
+    border-radius: 2px;
+    padding: 1.5em;
+    min-width: 400px;
+    background-color: $bg-color-normal;
+    box-shadow: $box-shadow-dialog;
+    box-sizing: border-box;
   }
 
   &-title {
-    text-align: left;
-    font-size: 13px;
-    padding: 8px 12px;
-    margin-bottom: 1em;
-    overflow-wrap: break-word;
-    background-color: #0f88eb;
-    color: #fff;
-    border-radius: $border-radius-normal $border-radius-normal 0 0;
+    margin-top: 1em;
+    font-size: 1.5em;
+    color: $color-title;
+  }
+
+  &-subTitle {
+    margin-top: .25em;
+    font-size: .875em;
+    color: $color-gray;
   }
 
   &-content {
-    margin-bottom: 1em;
-    color: #333;
-    padding: 0 12px;
-    overflow-wrap: break-word;
-    letter-spacing: 1px;
-    font-size: 13px;
-    text-align: left;
+    @mixin ctrl-base-style;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: .875em;
+    text-align: center;
   }
 
   &-footer {
-    border-radius: 0 0 $border-radius-normal $border-radius-normal;
-    padding: 0.5em 1em;
-    text-align: right;
+    display: flex;
+    justify-content: center;
+    margin-top: .5em;
+    margin-bottom: .5em;
 
-    .$(prefix)Button {
-      &:not(:last-child) {
-        margin-right: 1em;
+    button {
+      min-width: 168px;
+    }
+
+    &--horizontal {
+      .$(prefix)Button:not(:first-child)  {
+        margin-left: 1em;
+      }
+    }
+
+    &--vertical {
+      .$(prefix)Button:not(:first-child)  {
+        margin-top: 1.75em;
       }
     }
   }

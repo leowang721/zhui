@@ -32,20 +32,16 @@
     @mixin ctrl-ui;
     @mixin ctrl-ui-border 1px dashed $border-color-normal;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-width: 300px;
     min-height: $ctrl-inline-height;
-    font-size: $input-font-size;
+    font-size: $text-size;
     height: 20px;
     line-height: 26px;
     text-align: center;
-    color: $border-color-normal;
+    color: $color-gray;
     cursor: pointer;
-
-    @mixin ctrl-ui-hover;
-    @mixin ctrl-ui-disabled;
-  }
-
-  &-uploader:hover &-dropzone {
-    color: $color-hover;
   }
 }

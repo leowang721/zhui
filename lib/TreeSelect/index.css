@@ -1,0 +1,86 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)TreeSelect {
+  font-size: $text-size;
+  &-header {
+    line-height: 28px;
+    span {
+      margin-right: 20px;
+    }
+    .$(prefix)FormCtrl-message {
+      display: none;
+    }
+  }
+
+  &-detail {
+    display: flex;
+    jusify-content: flex-start;
+    align-items: flex-start;
+    @mixin animation-fade-in;
+
+    ul {
+      margin: 0;
+      padding: 5px;
+      box-sizing: border-box;
+      border: 1px solid $border-color-normal;
+      border-right: none;
+      max-height: 300px;
+      min-width: 170px;
+      overflow-y: auto;
+      &:first-child {
+        border-radius: 4px 0 0 4px;
+      }
+      &:last-child {
+        border-radius: 0 4px 4px 0;
+        border-right: 1px solid $border-color-normal;
+      }
+      li {
+        list-style: none;
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+        padding: 0 15px;
+        &.current {
+          background-color: #ecf0f8;
+        }
+        &:hover {
+          background-color: #f2f6ff;
+        }
+      }
+    }
+
+    .checkIcon {
+      display: inline-block;
+      margin: 0 10px 0 5px;
+      box-sizing: border-box;
+      width: 12px;
+      height: 12px;
+      border: 1px solid $border-color-normal;
+      border-radius: 3px;
+      overflow: hidden;
+      font-size: 11px;
+      padding-bottom: 3px;
+      background-color: $bg-color-normal;
+      position: relative;
+      top: 1px;
+      i {
+        color: #fff;
+      }
+
+      &.checked,
+      &.partChecked {
+        background-color: $bg-color-primary;
+        border: 1px solid $bg-color-primary;
+        line-height: 12px;
+      }
+      &.partChecked {
+        i {
+          position: relative;
+          top: -2px;
+          left: 0.5px;
+        }
+      }
+    }
+  }
+}

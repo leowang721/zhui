@@ -11,14 +11,10 @@
 
   transition: border .3s $ease-in-out, box-shadow .3s $ease-in-out;
   position: relative;
-  height: 26px;
+  height: 28px;
 
   &:hover .$(prefix)InputNumber-control {
     opacity: 1;
-  }
-
-  &:hover .$(prefix)InputNumber-input {
-    padding-right: 29px;
   }
 
   &.disabled .$(prefix)InputNumber-input {
@@ -131,6 +127,6 @@
   &-prefix {
     position: absolute;
     line-height: 28px;
-    margin-left: 0.5em;
+    margin-left: .5em;
   }
 }

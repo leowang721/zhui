@@ -20,6 +20,9 @@
   &-form {
     .$(prefix)FormCtrl {
       display: inline-block;
+      .$(prefix)FormCtrl-label {
+        display: none;
+      }
     }
     .$(prefix)Select {
       margin-right: 10px;

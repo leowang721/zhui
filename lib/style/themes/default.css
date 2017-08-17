@@ -1,34 +1,42 @@
 $prefix: Zhui;
 
 /* colors */
-$color-normal: #404040;
-$color-primary: #108ee9;
-$color-info: #108ee9;
+$color-normal: rgba(0, 0, 0, .8);
+$color-gray: #8590a6;
+$color-white: #ffffff;
+$color-title: #000000;
+$color-primary: #0f88eb;
+$color-info: #ecf6fd;
 $color-success: #00a854;
-$color-warning: #ffbf00;
-$color-error: #f04134;
+$color-warning: #fd9727;
+$color-error: #f75659;
 $color-hightlight: rgba(251, 246, 13, .65);
 $color-disabled: rgba(0, 0, 0, .25);
-$color-link: #03e;
-$color-hover: #108ee9;
-$color-danger: #f04134;
+$color-link: #175199;
+$color-hover: rgba(15, 136, 235, .8);
+$color-danger: #f75659;
 
 /* background colors */
 $bg-color-normal: #fff;
-$bg-color-primary: #108ee9;
+$bg-color-primary: #0f88eb;
 $bg-color-info: #ecf6fd;
-$bg-color-success: #ebf8f2;
-$bg-color-warning: #fffaeb;
-$bg-color-error: #fef0ef;
+$bg-color-success: #00a854;
+$bg-color-warning: #fd9727;
+$bg-color-error: #f75659;
 $bg-color-disabled: #f7f7f7;
-$bg-color-danger: #f7f7f7;
+$bg-color-danger: #f75659;
+$bg-color-inlineedit: #fffdf1;
+$bg-color-shadow: rgba(0, 0, 0, 0.03);
 
 /* boxshadow */
-$box-shadow-active: 0 0 0 2px rgba(16, 142, 233, .2);
+$box-shadow-normal: 0 0 3px 0 rgba(111, 111, 111, .2);
+$box-shadow-card: 0 2px 10px 0 rgba(57, 41, 114, .05);
+$box-shadow-active: 0 0 0 1px rgba(16, 142, 233, .2);
 $box-shadow-success: 0 0 0 2px rgba(0, 168, 84, .2);
 $box-shadow-warning: 0 0 0 2px rgba(255, 191, 0, .2);
 $box-shadow-error: 0 0 0 2px rgba(240, 65, 52, .2);
 $box-shadow-danger: 0 0 0 2px rgba(240, 65, 52, .2);
+$box-shadow-dialog: 0 5px 20px 0 rgba(0, 34, 77, .1);
 
 /* text */
 $text-color: $color-normal;
@@ -45,16 +53,16 @@ $border-color-hover: $color-hover;
 $border-color-disabled: #d9d9d9;
 $border-color-info: #d2eafb;
 $border-color-success: #00a854;
-$border-color-warning: #ffbf00;
-$border-color-error: #f04134;
-$border-color-danger: #d9d9d9;
+$border-color-warning: #fd9727;
+$border-color-error: #f75659;
+$border-color-danger: #f75659;
 
-$border-color-normal: #d9d9d9;
+$border-color-normal: #cfd6e3;
 $border-width-normal: 1px;
 $border-style-normal: solid;
 
 $border-normal: $border-width-normal $border-color-normal $border-style-normal;
-$border-radius-normal: 4px;
+$border-radius-normal: 3px;
 
 /* ctrls common */
 $ctrl-box-sizing: border-box;
@@ -63,8 +71,8 @@ $ctrl-text-align: left;
 $ctrl-margin: 0;
 $ctrl-padding: 0;
 $ctrl-label-width: 150px;
-$ctrl-label-line-height: 28px;
-$ctrl-inline-height: 28px;
+$ctrl-label-line-height: 30px;
+$ctrl-inline-height: 30px;
 $ctrl-inline-width: 100%;
 $ctrl-inline-width-pixels: 300px;
 $ctrl-inline-line-height: 22px;
@@ -77,10 +85,11 @@ $group-legend-margin: 0 8px;
 $group-legend-padding: 0 2px;
 
 /* buttons */
-$btn-color: rgba(0, 0, 0, .65);
-$btn-font-weight: 500;
+$btn-color-normal: $bg-color-primary;
+$btn-color-ignore: #a1aebf;
+$btn-font-weight: normal;
 $btn-cursor: pointer;
-$btn-padding: 0 15px;
+$btn-padding: 0 12px;
 $btn-text-align: center;
 
 /* inputs */

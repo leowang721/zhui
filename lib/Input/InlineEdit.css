@@ -11,7 +11,7 @@
     line-height: $ctrl-label-line-height;
     height: $ctrl-label-line-height;
     &:hover:not([disabled]) {
-      background-color: #fffdf1;
+      background-color: $bg-color-inlineedit;
       cursor: text;
       font-style: italic;
     }
@@ -20,6 +20,9 @@
   &-form {
     .$(prefix)FormCtrl {
       display: inline-block;
+      .$(prefix)FormCtrl-label {
+        display: none;
+      }
     }
     .$(prefix)Input {
       margin-right: 10px;

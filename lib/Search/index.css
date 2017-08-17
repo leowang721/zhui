@@ -1,0 +1,36 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)Search {
+  @mixin ctrl-base-style;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+
+  &-input {
+    input {
+      padding-right: 30px;
+    }
+    .$(prefix)FormCtrl-message {
+      display: none;
+    }
+  }
+
+  &-button {
+    position: absolute;
+    width: 25px;
+    padding: 2px 0 0 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    right: 1px;
+    top: 0;
+    cursor: pointer;
+    transition: all .3s $ease-in-out;
+    height: 30px;
+  }
+
+  &--is-focus &-button {
+    background-color: $color-hover;
+    border-radius: 0 4px 4px 0;
+  }
+}

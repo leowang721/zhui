@@ -1,0 +1,8 @@
+@import "../style/themes/default.css";
+
+.$(prefix)Card {
+  border-radius: 4px;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: $box-shadow-card;
+}

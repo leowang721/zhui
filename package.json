@@ -5,13 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node website/server/start.js",
-    "start:prod": "node website/server/start.prod.js",
+    "start": "start-storybook -p 6006",
     "gen:doc": "esdoc",
-    "build": "webpack --config=tools/server/webpack.config.prod.js",
-    "lint": "standard",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint": "standard"
   },
   "keywords": [
     "React",
@@ -24,8 +21,11 @@
     "async-validator": "^1.7.1",
     "lodash.isequal": "^4.5.0",
     "lodash.omit": "^4.5.0",
+    "lodash.pick": "^4.4.0",
     "moment": "^2.18.1",
-    "react-dropzone": "^3.13.3"
+    "react-dropzone": "^3.13.3",
+    "react-svg-loader": "^1.1.1",
+    "svg-loader": "^0.0.2"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.1.6",

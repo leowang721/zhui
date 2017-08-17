@@ -2,7 +2,7 @@
 @import "../style/mixins.css";
 
 .$(prefix)ButtonGroup {
-
+  @mixin ctrl-base-style;
   display: inline-block;
   padding-left: 1px;
   width: auto;
@@ -12,6 +12,9 @@
     margin: 0 0 0 -1px!important;
     display: inline-block;
 
+    .$(prefix)FormCtrl-label {
+      display: none;
+    }
     .$(prefix)FormCtrl-content {
       margin: 0;
     }

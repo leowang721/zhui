@@ -2,6 +2,7 @@
 @import "../style/mixins.css";
 
 .$(prefix)FormCtrl {
+  @mixin ctrl-base-style;
   /* 位置 */
   display: inline-block;
   position: relative;
@@ -11,9 +12,6 @@
   margin: $ctrl-margin;
   /* 长相 */
   background-color: $bg-color-normal;
-  color: $text-color;
-  font-size: $text-size;
-  font-weight: normal;
   text-align: $ctrl-text-align;
   vertical-align: $ctrl-vertical-align;
 

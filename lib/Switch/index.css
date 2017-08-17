@@ -1,0 +1,37 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
+.$(prefix)Switch {
+  display: inline-block;
+  height: 30px;
+  width: 40px;
+  box-sizing: border-box;
+
+  &-container {
+    height: 24px;
+    margin: 3px 0;
+    border-radius: 13px;
+    border: 1px solid $border-color-normal;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &-switcher {
+    position: absolute;
+    top: 5px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    @mixin animation-fade-in;
+    transition: all .3s $ease-in-out;
+    &--is-true {
+      background-color: #0f88eb;
+      right: 5px;
+    }
+    &--is-false {
+      background-color: #8590a6;
+      left: 5px;
+    }
+  }
+}

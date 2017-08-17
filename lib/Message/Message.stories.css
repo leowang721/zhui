@@ -1,0 +1,67 @@
+.MessageDemo {
+  &>section:not(:last-child) {
+    border-bottom: 1px solid #efefef;
+  }
+
+  &>section:last-child {
+    margin-bottom: 18px
+  }
+
+  h3 {
+    color: #333;
+    font-size: 18px;
+    margin: 18px 0;
+    font-weight: 600;
+  }
+
+  h3 + p {
+    color: #999;
+    font-size: 12px;
+  }
+
+  & table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  & th,
+  & td {
+    padding: 8px 16px;
+    font-size: #999;
+    white-space: nowrap;
+    color: #666;
+    padding: 4px 8px;
+    font-size: 14px;
+    border: 1px solid #e9e9e9;
+  }
+
+  & td:first-child {
+    background-color: #fcfcfc;
+  }
+
+  & th {
+    background-color: #f6f6f6;
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .tip {
+    color: #666;
+    font-size: 14px;
+
+    &::before {
+      content: '注意：';
+      color: #ff7c5a;
+    }
+  }
+}
+
+.MessageDemo-btnWrap {
+  .ZhuiButton:not(:last-child) {
+    margin-right: 2em;
+  }
+}

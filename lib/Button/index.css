@@ -3,24 +3,24 @@
 
 .$(prefix)Button {
   vertical-align: top;
-  button {
+
+  button, a {
     @mixin ctrl-ui;
 
-    width: auto;
-    background: #fff;
-    color: $btn-color;
-    cursor: $btn-cursor;
-    font-weight: $btn-font-weight;
     padding: $btn-padding;
+    width: auto;
+    font-weight: $btn-font-weight;
     text-align: $btn-text-align;
     touch-action: manipulation;
     user-select: none;
     white-space: nowrap;
+    cursor: $btn-cursor;
+    background: transparent;
+    color: $btn-color-normal;
+    outline: 0;
 
-    @mixin ctrl-ui-border;
-    @mixin ctrl-ui-hover $text-color;
-    @mixin ctrl-ui-active $text-color;
-    @mixin ctrl-ui-disabled;
+    @mixin ctrl-ui-border 1px solid $btn-color-normal;
+    @mixin ctrl-ui-hover $color-hover, transparent, $border-color-hover;
   }
 
   & > .$(prefix)FormCtrl-content > .$(prefix)FormCtrl-message {
@@ -31,36 +31,45 @@
   }
 }
 
+.$(prefix)Button--is-disabled {
+  button, a {
+    opacity: .25;
+    cursor: not-allowed;
+  }
+}
+
 .$(prefix)ButtonSkinPrimary {
-  button {
-    background-color: $color-primary;
-    border-color: $color-primary;
-    color: #fff;
-    @mixin ctrl-ui-hover #fff, #49a9ee, #49a9ee;
-    @mixin ctrl-ui-active #fff, #49a9ee, #49a9ee;
-}
-  }
-.$(prefix)ButtonSkinDashed {
-  button {
+  button, a {
+    background-color: $bg-color-primary;
+    color: $color-white;
+    @mixin ctrl-ui-border 1px solid $bg-color-primary;
+    @mixin ctrl-ui-hover $color-white, $bg-color-primary, $bg-color-primary;
   }
 }
-    border-style: dashed;
+
 .$(prefix)ButtonSkinDanger {
-  button {
+  button, a {
     background-color: $bg-color-danger;
-    border-color: $border-color-danger;
-    color: $color-danger;
-    @mixin ctrl-ui-hover #fff, $color-danger, $color-danger;
+    color: $color-white;
+    @mixin ctrl-ui-border 1px solid $bg-color-danger;
+    @mixin ctrl-ui-hover $color-white, $bg-color-danger, $border-color-danger;
+  }
+}
+
+.$(prefix)ButtonSkinIgnore {
+  button, a {
+    color: $btn-color-ignore;
+    @mixin ctrl-ui-border 1px solid $btn-color-ignore;
+    @mixin ctrl-ui-hover $btn-color-ignore, transparent, $btn-color-ignore;
   }
 }
 .$(prefix)ButtonSkinLink {
-  button {
-    background: none;
+  background: transparent;
+  button, a {
+    color: $color-link;
     border: none;
-    color: $link-text-color;
-    font-weight: normal;
-    @mixin ctrl-ui-hover $link-hover-color;
-    @mixin ctrl-ui-active $link-text-color, none, none, none;
-    @mixin ctrl-ui-disabled $color-disabled, none, none;
+    &:hover {
+      color: $color-hover;
+    }
   }
 }

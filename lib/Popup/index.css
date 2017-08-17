@@ -1,20 +1,29 @@
+@import "../style/themes/default.css";
+@import "../style/mixins.css";
+
 .ZhuiPopup {
   &--is-hidden {
     display: none;
   }
+
   &--is-visible {
     display: block;
   }
+
   &-content {
+    display: flex;
     position: absolute;
+    @mixin ctrl-base-style;
   }
+
   &-mask--is-white {
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    background: #fff;
+    background: $bg-color-normal;
   }
+
   &-mask--is-black {
     left: 0;
     top: 0;
@@ -22,6 +31,7 @@
     bottom: 0;
     background: rgba(0, 0, 0, .2);
   }
+
   &-mask--is-fixed {
     position: fixed;
     display: flex;
@@ -29,10 +39,13 @@
     justify-content: center;
 
     .ZhuiPopup-content {
+      justify-content: center;
+      align-items: center;
       position: relative;
       text-align: center;
     }
   }
+
   &-mask--is-none {
     left: 0;
     right: 0;
